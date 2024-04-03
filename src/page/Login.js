@@ -2,7 +2,7 @@ import {React, useState} from 'react'
 import { useNavigate } from "react-router-dom";
 import { Form, Button, Container } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import {AuthenticateAction} from '../redux/actions/AuthenticateAction';
+import {AuthenticateAction} from '../redux/actions/AuthenticateActions';
 
 const Login = ({setAuthenticate}) => {
   const [id, setId] = useState();

@@ -1,11 +1,8 @@
-import React from 'react'
-import { Navigate } from 'react-router-dom'
-import ProductDetail from '../page/ProductDetail'
-import { useSelector } from 'react-redux'
-
-const PrivateRoute = () => {
-  const authenticate = useSelector((state) => state.auth.authenticate);
-  return authenticate === true ? <ProductDetail /> : <Navigate to='/Login' />
+function login (id, password) {
+  return (dispatch, getState) => {
+      console.log("login success action")
+      dispatch({type: "LOGIN_SUCCESS", payload: {id, password}})
+  }
 }
 
-export default PrivateRoute
+export const AuthenticateAction = {login};

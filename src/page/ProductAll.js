@@ -1,7 +1,11 @@
+import React from 'react'
+import { useEffect, useState } from "react";
+import { useSearchParams } from 'react-router-dom';
+import ProductCard from '../component/ProductCard';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import {ProductAction} from '../redux/actions/ProductAction'
+import {ProductAction} from '../redux/actions/ProductActions'
 import { useDispatch, useSelector } from 'react-redux';
 
 const ProductAll = () => {

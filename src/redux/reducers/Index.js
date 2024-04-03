@@ -1,15 +1,10 @@
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from "react-router-dom";
-import { Provider } from 'react-redux';
-import store from './redux/Store';
+// reducer가 여러개가 되면 합쳐줘야함
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <Provider store={store}>
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-  </Provider>
+import { combineReducers } from 'redux'
+import authenticateReducer from './AuthentiacteReducer'
+import productReducer from './ProductReducer'
 
-);
+export default combineReducers({
+    auth: authenticateReducer,
+    product: productReducer
+})
